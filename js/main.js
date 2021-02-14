@@ -90,9 +90,9 @@
 
     // Add event listeners
     if (mobile) {
-      mainHero.addEventListener("touchstart", drag);
+      document.addEventListener("touchstart", drag, { passive: false });
     } else {
-      mainHero.addEventListener('mousedown', drag);
+      document.addEventListener('mousedown', drag);
     };
 
     // Disabling Drag'n'Drop Browser
