@@ -1,7 +1,3 @@
-/*@import "variables";
-@import "typography";
-@import "controls";
-@import "layout";*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,15 +38,6 @@ body {
       cursor: grabbing; }
   .hero--enemy {
     background-color: red; }
-  .hero--enemy-1 {
-    top: 25%;
-    right: 20%; }
-  .hero--enemy-2 {
-    top: 50%;
-    right: 20%; }
-  .hero--enemy-3 {
-    top: 75%;
-    right: 20%; }
 
 .game-over {
   display: flex;
@@ -62,13 +49,19 @@ body {
   top: 0;
   bottom: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  font-size: 130px;
+  font-size: 160px;
   color: #8eff00;
   transform: scale(0);
   transition: 0.3s transform ease;
   transition-delay: 0.5s; }
+  @media (max-width: 767px) {
+    .game-over {
+      font-size: 120px; } }
+  @media (max-width: 575px) {
+    .game-over {
+      font-size: 70px; } }
   .game-over--show {
     transform: scale(1); }
 
